@@ -36,8 +36,8 @@ class Table:
     def insert(self, conn, data):
         vals = ['\'{}\''.format(v) for v in data.values()]
         q = 'INSERT INTO {} ({}) VALUES ({});'.format(self.name,
-                                                          ', '.join(data.keys()),
-                                                          ', '.join(vals))
+                                                      ', '.join(data.keys()),
+                                                      ', '.join(vals))
         print(q)
         self.send_query(conn, q)
         conn.commit()

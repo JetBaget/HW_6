@@ -10,4 +10,6 @@ class User(Base):
 
 
 conn = sqlite3.connect('my_data_base.db')
-User(id=1, username='doe', connection=conn).select_all()
+# User(id=1, username='doe', connection=conn).select_all()
+# User(id=1, username='doe', connection=conn).create_table()
+User(connection=conn).drop()

@@ -25,8 +25,8 @@ posts = Table('posts', metadata,
 #     print(err)
 
 try:
-    # metadata.create_all(conn)
-    user.insert(conn, {'username': 'Smith', 'id': '2'})
+    metadata.create_all(conn)
+    # user.insert(conn, {'username': 'Smith', 'id': '2'})
     # user.drop(conn)
     # posts.drop(conn)
 except SqliteAlchemyError as err:
